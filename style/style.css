@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --cor-primaria: #F6E1C3;
+    --cor-secundaria: #F5E8C7;
+    --cor-houver: #F6B17A; 
+    --cor-borda: #7077A1;;
+    --cor-fonte: #2D3250;
+    --cor-fonte_sec: #424769;
+    --fonte-primaria: 'Inter', sans-serif;
+} 
+
+*{    
+    margin: 0;
+    padding: 0;
+    font-family: var(--fonte-primaria);
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-fonte);
+    
+}
+
+.cabecalho{
+    padding: 0.5% 0% 0% 2.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+.apresentacao {
+    padding: 2% 5%;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.apresentação_esquerdo {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.insercao_texto{
+    padding: 5px;
+    max-width: 100%;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid var(--cor-primaria);
+    background-color: var(--cor-primaria);
+    color:var(--cor-fonte);
+    width: 345px;
+    height: 330px;
+    width: 100%;
+    text-transform:lowercase;
+    background: transparent;
+    box-shadow: nome;
+    border: nome;
+    outline: 0;
+}
+
+.mensagem_observacao{
+    font-size: 0.8rem;
+    color: var(--cor-fonte_sec);
+    
+}
+
+.botoes{
+    display: flex; 
+    gap: 40px; 
+}
+
+.botao_ação{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-borda);
+    width: 50%;
+    text-align: center;
+    border-radius: 30px;
+    font-size: 1,5rem;
+    font-weight: 600;
+    padding: 24px 0;
+    text-decoration: none;
+    color: var(--cor-fonte);
+    font: var(--fonte-primaria);
+}
+
+.botao_ação:hover {
+    background-color: var(--cor-houver);
+    font-size: 1,56rem; /* 25px */ 
+}
+
+.apresentação_direito {
+    width: 40%;
+    align-items: center;
+    text-align: center;
+    box-shadow: 3px 3px 3px 2px var(--cor-houver);
+    border-radius: 30px;
+    padding: 5% 0% 5% 0%;
+    background-color: var(--cor-secundaria);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.texto_nao_encontrado {
+    font-size: 1.5rem;
+     
+}
+
+.texo_digite_texto {
+    font-size: 1rem; 
+}
+.rodape {
+      
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 20px 0px 10px 0px;
+    color: var(--cor-fonte_sec);
+    text-align: center;
+}
+
+.redes_sociais{
+    text-decoration: none;
+}
+
+/* addicionado com java script, baixo */
+
+
+#output-texto {
+    width: 345px;
+    height: 330px;
+    font-size: 1rem;
+    color: var(--cor-fonte);
+    background: transparent;
+    box-shadow: nome;
+    border: nome;
+    outline: 0;
+    text-transform:lowercase;
+    max-width: 80%;
+    display: block;
+    padding: 5px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    border: 1px solid var(--cor-primaria);
+    background-color: var(--cor-secundaria);
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+}  
+
+.botao-copiar {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-borda);
+    width: 50%;
+    text-align: center;
+    border-radius: 30px;
+    font-size: 1,5rem;
+    font-weight: 600;
+    padding: 24px 0;
+    text-decoration: none;
+    color: var(--cor-fonte);
+    font: var(--fonte-primaria);
+}
+
+.botao-copiar {
+    background-color: var(--cor-houver);
+    font-size: 1,56rem; 
+}
+
+@media (max-width: 768px ) {
+
+    .apresentacao {
+        padding: 2% 5%;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        gap: 50px;
+    }
+    .apresentação_esquerdo {
+        width: 100%;
+
+    }
+    .apresentação_direito {
+        width: 100%;
+        box-shadow: 4px 4px 4px 4px var(--cor-houver);
+    }
+    .apresent_imagem {
+        width: 0%;
+    }
+
+}
+
+@media (max-width: 375px ) {
+
+    .botoes {
+        flex-direction: column;
+        gap:20px;
+    }
+
+    .botao_ação{
+        width: 100%;
+    }
+
+    .mensagem_observacao{
+        font-size: 0.6rem;
+    }
+}

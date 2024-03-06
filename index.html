@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <img src="./assets/alura.png" alt="logo alura">
+    </header>
+    <main class="apresentacao">
+        <section class="apresentação_esquerdo"> 
+            <textarea id="imput-texto" class="insercao_texto" placeholder="Digite seu texto aqui..."></textarea>
+            <p class="mensagem_observacao">
+                <img src="./assets/Group.png" alt="sinal de ponto de exclamaçao">
+                ATENÇÃO: Apenas letras minúsculas e sem acento.
+            </p>
+            <div class="botoes">
+                <button onclick="criptografar()" class="botao_ação">Criptografar</button>
+                <button onclick="descriptografar()" class="botao_ação">Descriptografar</button>
+            </div>
+        </section>
+        <div id="output" class="apresentação_direito">
+            <img class="apresent_imagem" src="./assets/busca.svg" alt="imagem de um individuo desvendando algo">
+            <h1 class="texto_nao_encontrado">Nenhuma mensagem encontrada!</h1>
+            <p class="texo_digite_texto">Digite um texto que você deseja criptografar ou descripitografar.</p>
+        </div>
+    </main>
+    <footer class="rodape">
+        <p> © Desenvolvido por Sidney Rodrigues Magalhães.</p>
+        <a class="redes_sociais" href="https://github.com/sidneygyne" target="_blank">
+            <img src="./assets/github.png" alt="imagem github">
+            </a>
+        <a class="redes_sociais" href="https://www.linkedin.com/in/sidneygyn" target="_blank">
+            <img src="./assets/linkedin.png" alt="imagem linkedin">
+            </a>
+        <a class="redes_sociais" href="https://instragram.com/sidneygyn" target="_blank">
+            <img src="./assets/instagram.png" alt="imagem instagram">
+            </a>
+    </footer>
+    
+    <script src="./script/app.js"></script>
+
+</body>
+</html>
+
