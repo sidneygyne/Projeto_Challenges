@@ -136,7 +136,7 @@ body {
 /* addicionado com java script, baixo */
 
 
-#output-texto {
+.output-texto {
     width: 345px;
     height: 330px;
     font-size: 1rem;

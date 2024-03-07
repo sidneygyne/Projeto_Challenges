@@ -1,50 +1,36 @@
-var textoImput = document.querySelector("#imput-texto");
+var textoImput = document.querySelector("#input-texto");
 var outImput = document.querySelector("#output");
 
-function criptografar0(){
-    var texto = textoImput.value;
-
-    var resultadoCripto = texto.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufa");
-   
-    document.getElementById("output").innerHTML = '<textarea readonly id="output-texto">' + resultadoCripto
-    '</textarea>'
-}                                                   
 
 function criptografar(){
     var texto = textoImput.value;
-
     var resultadoCripto = texto.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufa");
-   
-    document.getElementById("output").innerHTML = '<button onclick="copiar()" class="botao_ação" id="copiar">Copiar</button>'
-    + '<textarea readonly id="output-texto">' + resultadoCripto
-    '</textarea>'
+    outImput.innerHTML = '<textarea readonly id="input-texto" class="output-texto">' + resultadoCripto + '</textarea>' + '<button onclick="copiar()" class="botao_ação">Copiar</button>';
+    var x = '<textarea readonly id="saida" class="output-texto">' + resultadoCripto;
+
+    saidaTexto = texto.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufa");
+    botaoCopiarTexto = saidaTexto;
+    resultadoCripto.innerHTML = saidaTexto;
 }
-
-
 
 
 function descriptografar(){
     var texto = textoImput.value;
-   
     var resultadoDescripto = texto.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufa/g, "u");
-   
-    document.getElementById("output").innerHTML = '<button onclick="copiar()" class="botao_ação" id="copiar">Copiar</button>'
-    + '<textarea readonly id="output-texto">' + resultadoDescripto 
-    '</textarea>' 
+    outImput.innerHTML = '<textarea readonly id="input-texto" class="output-texto">' + resultadoDescripto + '</textarea>' + '<button onclick="copiar()" class="botao_ação">Copiar</button>';
 }
 
 
+function copiar() {
+    navigator.clipboard.writeText(botaoCopiarTexto);
+}
+
 
 function copiar() {
-    var textoCop = document.getElementById("imput-texto");
+    var textoCop = document.getElementById('#input-texto');
     textoCop.select();
-    textoCopiado.setSelectionRange(0, 99999)
+    textoCopiado.setSelectionRange(0, 99999);
     document.execCommand('copy');
     alert("Texto Copiado");
 
 }
-
-
-//function criptografar() {
-//    document.getElementById("p2").innerHTML = resultadoCripto;
-//}
